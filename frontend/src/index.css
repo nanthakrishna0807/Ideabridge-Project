@@ -1,0 +1,95 @@
+﻿@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-slate-800 font-sans selection:bg-blue-500/30;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-slate-900 tracking-tight font-bold;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(16px);
+  }
+
+  .glass-light {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    border-radius: 1rem;
+    backdrop-filter: blur(20px);
+    @apply text-slate-800;
+  }
+
+  .blue-glow {
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.15);
+  }
+
+  .btn-primary {
+    background-color: #2563EB;
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-secondary {
+    background-color: #38BDF8;
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background-color: #0ea5e9;
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-sky-500;
+  }
+
+  .card-premium {
+    @apply bg-white border border-slate-100 shadow-xl shadow-slate-200/50 rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .card-premium:hover {
+    @apply border-blue-100 shadow-blue-100/50 -translate-y-1;
+  }
+}
