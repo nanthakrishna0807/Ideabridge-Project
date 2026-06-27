@@ -13,10 +13,7 @@ const app = express();
 ============================== */
 
 app.use(cors({
-  origin: [
-    "http://localhost:5177",
-    "http://127.0.0.1:5177"
-  ],
+  origin: "https://ideabridgeapp.netlify.app",
   credentials: true
 }));
 
