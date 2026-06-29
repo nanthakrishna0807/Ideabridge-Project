@@ -90,6 +90,8 @@ exports.authUser = async (req, res) => {
                 email: email,
                 name: "Investor Demo",
             });
+
+            
         }
 
         const user = await User.findOne({ email });
